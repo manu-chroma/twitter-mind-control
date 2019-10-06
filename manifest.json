@@ -1,0 +1,46 @@
+{
+  "name": "Twitter control",
+  "version": "0.1",
+  "description": "Regain control of your time and attention",
+  "permissions": [
+    "https://twitter.com/*",
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "management"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*"
+      ],
+      "css": [],
+      "js": [
+        "content_script.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "vendor/hot-reload.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "*"
+  ],
+  "icons": {
+    "16": "images/icons8-timer-16.png",
+    "32": "images/icons8-timer-32.png",
+    "48": "images/icons8-timer-48.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icons8-timer-16.png",
+      "32": "images/icons8-timer-32.png",
+      "48": "images/icons8-timer-48.png"
+    }
+  },
+  "manifest_version": 2
+}
